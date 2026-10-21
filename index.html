@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bharath Innovate | Authentic South Indian food products</title>
+<meta name="description" content="Bharath Innovate is an Indian FMCG company making and distributing high quality food products under the South Harvest brand, and a distribution partner for other brands.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#1f3d2b; --green-2:#2f5a40; --amber:#d89a1e; --amber-soft:#f3dfae;
+  --brown:#5a3a22; --paper:#f7f6f0; --ink:#1d2620; --muted:#5b655d; --line:#dcdccf;
+  --serif:"Young Serif",Georgia,"Times New Roman",serif;
+  --sans:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.15;color:var(--green)}
+h2{font-size:clamp(28px,4vw,40px);margin-bottom:16px}
+h3{font-size:22px;margin-bottom:8px}
+p{max-width:62ch}
+
+/* header */
+header{position:sticky;top:0;z-index:10;background:rgba(247,246,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--serif);font-size:22px;color:var(--green);text-decoration:none}
+nav{display:flex;gap:28px}
+nav a{text-decoration:none;font-weight:500;color:var(--muted)}
+nav a:hover{color:var(--green)}
+.btn{display:inline-block;background:var(--amber);color:#2a1d05;font-weight:600;padding:13px 26px;border-radius:999px;text-decoration:none;transition:background .2s}
+.btn:hover{background:#e8ad35}
+.btn.alt{background:transparent;border:2px solid var(--green);color:var(--green);margin-left:12px;padding:11px 24px}
+.btn.alt:hover{background:var(--green);color:#fff}
+
+/* hero */
+.hero{background:var(--green);color:#fff;overflow:hidden}
+.hero .wrap{padding-top:104px;padding-bottom:104px}
+.hero .wrap>div{max-width:760px}
+.hero h1{color:#fff;font-size:clamp(40px,6.2vw,72px);margin-bottom:24px}
+.hero p{color:#dbe6dd;font-size:19px;margin-bottom:34px}
+.hero .btn.alt{border-color:#fff;color:#fff}
+.hero .btn.alt:hover{background:#fff;color:var(--green)}
+
+/* sections */
+section{padding:84px 0}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.about p+p{margin-top:16px}
+.about p{color:var(--muted)}
+.facts{list-style:none;padding:0;border-left:4px solid var(--amber);padding-left:28px;display:grid;gap:22px;align-content:start}
+.facts strong{display:block;font-family:var(--serif);font-weight:400;font-size:20px;color:var(--green)}
+.facts span{color:var(--muted)}
+
+.range{background:#fff;border-block:1px solid var(--line)}
+.range .intro{margin-bottom:40px}
+.range .intro p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.item{padding:26px 24px;border-top:6px solid var(--c);background:var(--paper)}
+.item p{color:var(--muted);font-size:16px}
+.item:nth-child(3n+1){--c:var(--green)}
+.item:nth-child(3n+2){--c:var(--amber)}
+.item:nth-child(3n){--c:var(--brown)}
+
+.dist{background:var(--amber-soft)}
+.dist .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.dist p{color:#4a3b1c}
+.dist .btn{margin-top:26px;background:var(--green);color:#fff}
+.dist .btn:hover{background:var(--green-2)}
+.offer{list-style:none;padding:0;display:grid;gap:20px}
+.offer li{background:#fff;padding:20px 22px;border-left:6px solid var(--green)}
+.offer strong{display:block;font-family:var(--serif);font-weight:400;font-size:20px;color:var(--green)}
+.offer span{color:var(--muted);font-size:16px}
+.promise .grid{grid-template-columns:repeat(4,1fr);gap:32px;margin-top:36px}
+.promise h3{font-size:20px}
+.promise p{color:var(--muted);font-size:16px}
+
+.contact{background:var(--green);color:#fff}
+.contact h2{color:#fff}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.contact p{color:#dbe6dd}
+.details{list-style:none;padding:0;margin-top:28px;display:grid;gap:10px}
+.details a{color:var(--amber-soft)}
+form{display:grid;gap:14px}
+label{font-weight:500;font-size:15px}
+input,textarea,select{width:100%;font:inherit;padding:12px 14px;border:2px solid transparent;border-radius:8px;background:#fff;color:var(--ink);margin-top:4px}
+input:focus,textarea:focus,select:focus{outline:3px solid var(--amber)}
+textarea{min-height:110px;resize:vertical}
+form .btn{border:0;cursor:pointer;font:inherit;font-weight:600;justify-self:start}
+
+footer{background:#16291d;color:#b9c7bc;padding:28px 0;font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+@media (max-width:860px){
+  nav{display:none}
+  .about .wrap,.contact .wrap,.dist .wrap{grid-template-columns:1fr}
+  .hero .wrap{padding-top:56px;padding-bottom:56px}
+  .grid,.promise .grid{grid-template-columns:1fr 1fr}
+  section{padding:60px 0}
+}
+@media (max-width:540px){
+  .grid,.promise .grid{grid-template-columns:1fr}
+  .btn.alt{margin:12px 0 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top">Bharath Innovate</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#range">South Harvest</a>
+      <a href="#distribution">Distribution</a>
+      <a href="#promise">Our standards</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>The taste of South India, made for every kitchen.</h1>
+        <p>Bharath Innovate makes and distributes high quality food products that bring together authentic taste, premium quality and fair prices.</p>
+        <a class="btn" href="#range">See South Harvest</a>
+        <a class="btn alt" href="#distribution">Partner with us</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="about" id="about">
+    <div class="wrap">
+      <div>
+        <h2>Who we are</h2>
+        <p>Bharath Innovate is an Indian FMCG company engaged in the manufacturing, marketing and distribution of high quality food products. We keep the highest standards of hygiene and food safety at every step.</p>
+        <p>Our flagship brand, South Harvest, is inspired by the culinary heritage of South India. With a strong focus on quality, innovation and customer satisfaction, we aim to bring trusted, flavourful and wholesome products to households and businesses across India.</p>
+        <p>Alongside South Harvest, we distribute a variety of food and FMCG brands in our territory, working as the local partner for manufacturers.</p>
+      </div>
+      <ul class="facts">
+        <li><strong>Authentic taste</strong><span>Recipes and sourcing rooted in South Indian cooking.</span></li>
+        <li><strong>Premium quality</strong><span>Carefully curated ingredients, checked before they reach you.</span></li>
+        <li><strong>Affordable</strong><span>Good food that fits a household or a business budget.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="range" id="range">
+    <div class="wrap">
+      <div class="intro">
+        <h2>The South Harvest range</h2>
+        <p>A carefully curated selection of everyday staples, with more products on the way.</p>
+      </div>
+      <div class="grid">
+        <article class="item"><h3>Spices</h3><p>Whole and ground spices for the daily kitchen.</p></article>
+        <article class="item"><h3>Curry powders</h3><p>Blended for the classic flavours of South Indian curries.</p></article>
+        <article class="item"><h3>Cereals</h3><p>Wholesome grains and cereals for simple, filling meals.</p></article>
+        <article class="item"><h3>Coffee</h3><p>Coffee powder with a rich aroma, ready for filter coffee.</p></article>
+        <article class="item"><h3>Tea</h3><p>Tea powder with a strong, full-bodied cup.</p></article>
+        <article class="item"><h3>Honey</h3><p>Pure honey, packed with care.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="dist" id="distribution">
+    <div class="wrap">
+      <div>
+        <h2>Distribution partner for leading brands</h2>
+        <p>Besides our own South Harvest products, Bharath Innovate distributes a variety of brands across our territory. If you are a manufacturer looking for a dependable distributor to take your products to retailers and wholesalers, we would like to hear from you.</p>
+        <a class="btn" href="#contact">Manufacturers, contact us</a>
+      </div>
+      <ul class="offer">
+        <li><strong>Local market reach</strong><span>Established access to retailers, wholesalers and business buyers in our territory.</span></li>
+        <li><strong>Reliable supply</strong><span>Careful handling, storage and timely delivery that keeps your brand's quality intact.</span></li>
+        <li><strong>A direct line to the owner</strong><span>Talk to us directly about terms, targets and how to launch in the region.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="promise" id="promise">
+    <div class="wrap">
+      <h2>What we stand for</h2>
+      <p>Every pack carries the same commitments, whether it goes to a family or a business.</p>
+      <div class="grid">
+        <div><h3>Hygiene</h3><p>Clean processing and packing, every batch.</p></div>
+        <div><h3>Food safety</h3><p>Safety standards followed from sourcing to dispatch.</p></div>
+        <div><h3>Innovation</h3><p>New products and better ways of making the ones you know.</p></div>
+        <div><h3>Customer care</h3><p>We listen, and we improve because of it.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div>
+        <h2>Talk to us</h2>
+        <p>Are you a manufacturer looking for a distributor, a retailer who wants to stock South Harvest, or a business buyer? Send us a message and we will reply.</p>
+        <ul class="details">
+          <!-- EDIT: replace with your real details -->
+          <li>Email: <a href="mailto:info@bharathinnovate.com">info@bharathinnovate.com</a></li>
+          <li>Phone: <a href="tel:+918075255088">+91 80752 55088</a></li>
+          <li>Address: 373/A Pariyaram, Kalpetta, Wayanad 673121, Kerala, India</li>
+        </ul>
+      </div>
+      <form id="enquiry">
+        <label>Your name<input name="name" required autocomplete="name"></label>
+        <label>Phone or email<input name="contact" required></label>
+        <label>I am a
+          <select name="type">
+            <option>Manufacturer or brand owner</option>
+            <option>Customer</option>
+            <option>Retailer or distributor</option>
+            <option>Business buyer</option>
+          </select>
+        </label>
+        <label>Message<textarea name="message" required></textarea></label>
+        <button class="btn" type="submit">Send enquiry</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="yr">2026</span> Bharath Innovate. All rights reserved.</span>
+    <span>South Harvest is a brand of Bharath Innovate.</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+// This site is static, so the form opens the visitor's email app.
+// EDIT the address below to match your real email.
+document.getElementById('enquiry').addEventListener('submit', function(e){
+  e.preventDefault();
+  var f = new FormData(this);
+  var body = 'Name: ' + f.get('name') + '\nContact: ' + f.get('contact') +
+             '\nType: ' + f.get('type') + '\n\n' + f.get('message');
+  location.href = 'mailto:info@bharathinnovate.com?subject=' +
+    encodeURIComponent('Website enquiry from ' + f.get('name')) +
+    '&body=' + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
