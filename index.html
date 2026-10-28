@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add("js")</script>
 <title>Bharath Innovate | Authentic South Indian food products</title>
 <meta name="description" content="Bharath Innovate is an Indian FMCG company making and distributing high quality food products under the South Harvest brand, and a distribution partner for other brands.">
 <link rel="icon" type="image/png" href="favicon.png">
@@ -108,6 +109,79 @@ form .btn{border:0;cursor:pointer;font:inherit;font-weight:600;justify-self:star
 footer{background:#16291d;color:#b9c7bc;padding:28px 0;font-size:15px}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
+/* ---------- motion ---------- */
+@keyframes rise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(-60px,50px) scale(1.18)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes draw{to{background-size:100% .12em}}
+@keyframes ticker{to{transform:translateX(-50%)}}
+@keyframes pulse{0%{transform:scale(1);opacity:.55}100%{transform:scale(1.9);opacity:0}}
+.progress{position:fixed;top:0;left:0;width:100%;height:3px;background:var(--amber);transform:scaleX(0);transform-origin:left;z-index:60}
+header{transition:box-shadow .3s}
+header.scrolled{box-shadow:0 8px 28px rgba(31,61,43,.12)}
+.bar{transition:height .3s}
+header.scrolled .bar{height:56px}
+.logo img{transition:height .3s}
+header.scrolled .logo img{height:34px}
+nav a{position:relative}
+nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:100%;height:2px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+nav a:hover::after{transform:scaleX(1)}
+.btn{position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s,background .2s,color .2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(0,0,0,.22)}
+.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-130%)}
+.btn:hover::after{transform:translateX(130%);transition:transform .8s}
+
+.hero{position:relative}
+.hero .wrap{position:relative;z-index:1}
+.blob{position:absolute;border-radius:50%;filter:blur(64px);pointer-events:none}
+.b1{width:440px;height:440px;background:var(--amber);opacity:.42;top:-140px;right:-60px;animation:drift 14s ease-in-out infinite alternate}
+.b2{width:380px;height:380px;background:#4f8a62;opacity:.5;bottom:-170px;left:28%;animation:drift 18s ease-in-out infinite alternate-reverse}
+.b3{width:260px;height:260px;background:var(--brown);opacity:.4;top:28%;right:24%;animation:drift 16s ease-in-out infinite alternate}
+.ring{position:absolute;width:560px;height:560px;right:-150px;top:50%;margin-top:-280px;border:2px dashed rgba(243,223,174,.28);border-radius:50%;animation:spin 60s linear infinite;pointer-events:none}
+.ring.r2{width:380px;height:380px;right:-60px;margin-top:-190px;animation-duration:40s;animation-direction:reverse;border-style:solid;border-color:rgba(243,223,174,.16)}
+.hero h1{animation:rise .9s .1s backwards}
+.hero .wrap p{animation:rise .9s .3s backwards}
+.hero .btn{animation:rise .9s .5s backwards}
+.hero h1 em{font-style:normal;color:var(--amber);background:linear-gradient(var(--amber),var(--amber)) 0 100%/0 .12em no-repeat;animation:draw 1s 1s forwards}
+
+.ticker{background:var(--amber);color:#2a1d05;overflow:hidden;white-space:nowrap;padding:14px 0}
+.ticker .track{display:inline-flex;width:max-content;animation:ticker 30s linear infinite}
+.ticker:hover .track{animation-play-state:paused}
+.ticker span{font-family:var(--serif);font-size:20px;padding:0 22px;display:inline-flex;align-items:center;gap:44px}
+.ticker span::after{content:"";width:9px;height:9px;border-radius:50%;background:var(--green)}
+
+.js .reveal{opacity:0}
+.js .reveal.in{opacity:1;animation:rise .85s var(--d,0s) cubic-bezier(.2,.7,.2,1) backwards}
+h2::after{content:"";display:block;width:0;height:4px;border-radius:2px;background:var(--amber);margin-top:14px;transition:width .8s .35s}
+h2.in::after,html:not(.js) h2::after{width:64px}
+
+.item,.brand,.offer li,.facts li{transition:transform .3s,box-shadow .3s}
+.item:hover{transform:translateY(-8px);box-shadow:0 16px 32px rgba(31,61,43,.16)}
+.brand:hover{transform:translateY(-6px);box-shadow:0 14px 28px rgba(90,58,34,.2)}
+.logo-box img{transition:transform .4s}
+.brand:hover .logo-box img{transform:scale(1.07)}
+.offer li:hover{transform:translateX(8px);box-shadow:0 10px 24px rgba(31,61,43,.12)}
+.promise .grid>div{padding:22px 20px;border-radius:6px;transition:transform .3s,background .3s,box-shadow .3s}
+.promise .grid>div:hover{transform:translateY(-6px);background:#fff;box-shadow:0 14px 28px rgba(31,61,43,.12)}
+.range-logo{transition:transform .5s}
+.range-logo:hover{transform:scale(1.04) rotate(-1deg)}
+
+.wa::before{content:"";position:absolute;inset:0;border-radius:50%;background:#25D366;z-index:-1;animation:pulse 2.2s ease-out infinite}
+
+@media (max-width:860px){
+  .ring{display:none}
+  .blob{filter:blur(48px)}
+  .b1{width:300px;height:300px}
+  .b2{width:260px;height:260px}
+  .b3{display:none}
+  .ticker span{font-size:17px;padding:0 16px;gap:32px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1}
+  h2::after{width:64px}
+  .hero h1 em{background-size:100% .12em}
+}
 @media (max-width:860px){
   nav{display:none}
   .about .wrap,.contact .wrap,.dist .wrap{grid-template-columns:1fr}
@@ -125,6 +199,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 </style>
 </head>
 <body>
+<div class="progress" aria-hidden="true"></div>
 
 <header>
   <div class="wrap bar">
@@ -141,14 +216,18 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
 <main id="top">
   <div class="hero">
+    <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+    <span class="ring"></span><span class="ring r2"></span>
     <div class="wrap">
       <div>
-        <h1>The taste of South India, made for every kitchen.</h1>
+        <h1>The taste of <em>South India</em>, made for every kitchen.</h1>
         <p>Bharath Innovate makes and distributes high quality food products that bring together authentic taste, premium quality and fair prices.</p>
         <a class="btn" href="#distribution">Partner with us</a>
       </div>
     </div>
   </div>
+
+  <div class="ticker" aria-hidden="true"><div class="track"><span>Spices</span><span>Curry powders</span><span>Cereals</span><span>Coffee</span><span>Tea</span><span>Honey</span><span>South Harvest</span><span>Distribution partner for leading brands</span><span>Spices</span><span>Curry powders</span><span>Cereals</span><span>Coffee</span><span>Tea</span><span>Honey</span><span>South Harvest</span><span>Distribution partner for leading brands</span></div></div>
 
   <section class="about" id="about">
     <div class="wrap">
@@ -278,6 +357,40 @@ document.getElementById('enquiry').addEventListener('submit', function(e){
     encodeURIComponent('Website enquiry from ' + f.get('name')) +
     '&body=' + encodeURIComponent(body);
 });
+</script>
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var header = document.querySelector('header');
+  var bar = document.querySelector('.progress');
+  function onScroll(){
+    var y = window.scrollY || 0;
+    header.classList.toggle('scrolled', y > 10);
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.transform = 'scaleX(' + (h > 0 ? Math.min(y / h, 1) : 0) + ')';
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  var sel = ['h2','.about p','.facts li','.range .intro > *','.item','.dist .wrap > div > *','.offer li',
+             '.brands h3','.brands > p','.brand','.promise > .wrap > p','.promise .grid > div',
+             '.contact .wrap > div > *','#enquiry label','#enquiry .btn'];
+  var els = document.querySelectorAll(sel.join(','));
+  if (reduce || !('IntersectionObserver' in window)) { return; }
+  var parents = new Map();
+  els.forEach(function(el){
+    el.classList.add('reveal');
+    var n = parents.get(el.parentNode) || 0;
+    el.style.setProperty('--d', Math.min(n * 0.09, 0.55) + 's');
+    parents.set(el.parentNode, n + 1);
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.12, rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(el){ io.observe(el); });
+})();
 </script>
 </body>
 </html>
