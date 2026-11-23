@@ -4,7 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add("js")</script>
-<title>Bharath Innovate | Authentic South Indian food products</title>
+<title>Bharath Innovate | Makers of South Harvest – Food Products &amp; Distribution, Wayanad</title>
+<link rel="canonical" href="https://bharathinnovate.com/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bharath Innovate">
+<meta property="og:title" content="Bharath Innovate | Makers of South Harvest">
+<meta property="og:description" content="Indian FMCG company in Kalpetta, Wayanad making South Harvest food products and distributing leading food brands.">
+<meta property="og:url" content="https://bharathinnovate.com/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Bharath Innovate","url":"https://bharathinnovate.com/","email":"info@bharathinnovate.com","telephone":["+91-8075255088","+91-9526952003","+91-4936201200"],"address":{"@type":"PostalAddress","streetAddress":"373/A Pariyaram","addressLocality":"Kalpetta","addressRegion":"Wayanad, Kerala","postalCode":"673122","addressCountry":"IN"},"brand":{"@type":"Brand","name":"South Harvest","url":"https://southharvest.in/","logo":"https://southharvest.in/icon-512.png","slogan":"From the South with care"},"subOrganization":{"@type":"Organization","name":"South Harvest","url":"https://southharvest.in/"}}
+</script>
 <meta name="description" content="Bharath Innovate is an Indian FMCG company making and distributing high quality food products under the South Harvest brand, and a distribution partner for other brands.">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -179,12 +189,6 @@ h2.in::after,html:not(.js) h2::after{width:64px}
   .b3{display:none}
   .ticker span{font-size:17px;padding:0 16px;gap:32px}
 }
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  .js .reveal{opacity:1}
-  h2::after{width:64px}
-  .hero h1 em{background-size:100% .12em}
-}
 @media (max-width:860px){
   nav{display:none}
   .about .wrap,.contact .wrap,.dist .wrap{grid-template-columns:1fr}
@@ -198,7 +202,7 @@ h2.in::after,html:not(.js) h2::after{width:64px}
   .brand-grid{grid-template-columns:1fr 1fr}
   .btn.alt{margin:12px 0 0}
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -315,7 +319,7 @@ h2.in::after,html:not(.js) h2::after{width:64px}
           <!-- EDIT: replace with your real details -->
           <li>Email: <a href="mailto:info@bharathinnovate.com">info@bharathinnovate.com</a></li>
           <li>Phone: <a href="tel:+918075255088">+91 80752 55088</a> &nbsp;|&nbsp; <a href="tel:+919526952003">+91 95269 52003</a> &nbsp;|&nbsp; <a href="tel:+914936201200">+91 4936 201200</a></li>
-          <li>Address: 373/A Pariyaram, Kalpetta, Wayanad 673121, Kerala, India</li>
+          <li>Address: 373/A Pariyaram, Kalpetta, Wayanad 673122, Kerala, India</li>
         </ul>
       </div>
       <form id="enquiry">
@@ -363,7 +367,7 @@ document.getElementById('enquiry').addEventListener('submit', function(e){
 </script>
 <script>
 (function(){
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reduce = false; // animations always on, same as southharvest.in
   var header = document.querySelector('header');
   var bar = document.querySelector('.progress');
   function onScroll(){
